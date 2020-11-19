@@ -2,13 +2,15 @@
 
 {% block content %}
 <h1>投票主題 - ListView</h1>
+<a href="/poll/create/">新增投票主題</a>
 <ul>
     {% for poll in poll_list %}
     <li>
         {{ poll.date_created }} -
         <a href="/poll/{{ poll.id }}/">{{ poll.subject }}</a>
+         <a href="/poll/{{ poll.id }}/edit/">修改</a>
     <li>
-    {% endfor %}    9
+    {% endfor %}    
 </ul>
 {% endblock %}
 
